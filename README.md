@@ -240,7 +240,7 @@ kubectl get no
     worker-node3.a123mc.ru   NotReady   <none>          10s   v1.32.2
     master-node.a123mc.ru    NotReady   control-plane   11m   v1.32.2
 ```
-**Ноды в статусе NotReady из-за отсутствия сетевой связности между нодами**
+**Ноды в статусе NotReady из-за отсутствия сетевой связности между подами**
 
 
 ## 4. ВЫПОЛНИТЬ НА МАСТЕР-НОДЕ
