@@ -141,7 +141,7 @@ systemctl status rsyslog -l
 ```
 
 ## 1.15. Установить crictl для управления контейнерами
-#### https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/
+**https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/**
 ```bash
 cat <<EOF | tee /etc/crictl.yaml
 runtime-endpoint: "unix:///run/containerd/containerd.sock"
