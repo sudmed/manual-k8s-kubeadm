@@ -115,7 +115,7 @@ systemctl start containerd && \
 systemctl status containerd -l
 ```
 
-### 1.11. Установить бинари кубернетиса
+### 1.11. Установить утилиты для кубернетиса
 ```bash
 dnf install -y ipvsadm kubelet kubeadm kubectl --disableexcludes=kubernetes
 ```
