@@ -233,11 +233,11 @@ kubeadm join master.a123mc.ru:6443 --token gjyfbe.uy6ktl6t5d500lmx \
 kubectl get no
 ```
 ```console
-    NAME                   STATUS     ROLES           AGE   VERSION
-    kube-node1.a123mc.ru   NotReady   <none>          26s   v1.32.2
-    kube-node2.a123mc.ru   NotReady   <none>          16s   v1.32.2
-    kube-node3.a123mc.ru   NotReady   <none>          10s   v1.32.2
-    master.a123mc.ru       NotReady   control-plane   11m   v1.31.6
+    NAME                     STATUS     ROLES           AGE   VERSION
+    worker-node1.a123mc.ru   NotReady   <none>          26s   v1.32.2
+    worker-node2.a123mc.ru   NotReady   <none>          16s   v1.32.2
+    worker-node3.a123mc.ru   NotReady   <none>          10s   v1.32.2
+    master-node.a123mc.ru    NotReady   control-plane   11m   v1.32.2
 ```
 
 
