@@ -196,7 +196,7 @@ rm -rf /etc/kubernetes/manifests/* && \
 rm -rf /var/lib/etcd/*
 ```
 
-## Для траблшутинга смотреть логи:
+**Для траблшутинга смотреть логи**:
 ```bash
 crictl --runtime-endpoint unix:///var/run/containerd/containerd.sock ps -a | grep kube | grep -v pause
     88434fe3d4b07       1372127edc9da       37 seconds ago       Exited              kube-apiserver            17                  17f520fe51121       kube-apiserver-master-node.a123mc.ru
@@ -224,7 +224,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 kubeadm join <master_fqdn>:6443 --token <token> --discovery-token-ca-cert-hash <sha256_hash>
 ```
 ```bash
-kubeadm join master.a123mc.ru:6443 --token gjyfbe.uy6ktl6t5d500lmx \
+kubeadm join master-node.a123mc.ru:6443 --token gjyfbe.uy6ktl6t5d500lmx \
         --discovery-token-ca-cert-hash sha256:4ecf64eba576160dd1d8aea89da0b336887ec404fd957f7caf3048e5d4cb2cfe
 ```
 
