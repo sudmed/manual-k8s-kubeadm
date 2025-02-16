@@ -57,7 +57,7 @@ setenforce 0 && \
 sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 ```
 
-## 1.8. Тюнинг ядра линукс
+## 1.8. Тюнинг ядра
 ```bash
 cat <<EOF | tee /etc/sysctl.d/kubernetes.conf
 net.bridge.bridge-nf-call-iptables = 1
@@ -85,8 +85,8 @@ EOF
 ```
 
 ```bash
-modprobe overlay
-modprobe br_netfilter
+modprobe overlay && \
+modprobe br_netfilter && \
 sysctl --system
 ```
 
