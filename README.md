@@ -160,7 +160,7 @@ crictl ps
 ```
 
 # 2. ВЫПОЛНИТЬ НА МАСТЕР-НОДЕ
-## 2.1. Инициализация мастер-ноды, указываем полный хостнейм в FQDN-формате
+## 2.1. Инициализация мастер-ноды
 ```bash
 kubeadm config images pull
 kubeadm init --control-plane-endpoint=master-node.a123mc.ru
