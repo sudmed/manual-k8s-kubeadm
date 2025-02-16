@@ -91,7 +91,7 @@ sysctl --system
 ```
 
 ## 1.9. Подключить репозиторий кубернетиса
-#### Последнюю версию смотреть тут: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
+**Последнюю версию смотреть тут: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management**
 ```bash
 cat <<EOF | tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
