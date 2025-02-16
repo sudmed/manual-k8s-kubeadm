@@ -162,7 +162,7 @@ crictl ps
 # 2. ВЫПОЛНИТЬ НА МАСТЕР-НОДЕ
 ## 2.1. Инициализация мастер-ноды
 ```bash
-kubeadm config images pull
+kubeadm config images pull && \
 kubeadm init --control-plane-endpoint=master-node.a123mc.ru
 ```
 
@@ -188,11 +188,11 @@ kubeadm init --control-plane-endpoint=master-node.a123mc.ru
             --discovery-token-ca-cert-hash sha256:4ecf64eba576190dd1d8aea89da0b336887ec404fd957f7caf4048e5d4cb2cfe
 ```
 
-## Если мастер-нода не проинициализировалась и команда завершилась с ошибкой, перед повтором следует отменить инициализацию:
+**Если мастер-нода не проинициализировалась и команда завершилась с ошибкой, перед повтором следует отменить инициализацию**:
 ```bash
-kubeadm reset
-ipvsadm --clear
-rm -rf /etc/kubernetes/manifests/*
+kubeadm reset && \
+ipvsadm --clear && \
+rm -rf /etc/kubernetes/manifests/* && \
 rm -rf /var/lib/etcd/*
 ```
 
@@ -211,9 +211,9 @@ crictl --runtime-endpoint unix:///var/run/containerd/containerd.sock logs 17f520
 
 ## 2.2. После инициализации мастер-ноды копировать конфиги
 ```bash
-mkdir -p $HOME/.kube
-cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-chown $(id -u):$(id -g) $HOME/.kube/config
+mkdir -p $HOME/.kube && \
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && \
+chown $(id -u):$(id -g) $HOME/.kube/config && \
 export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
 
